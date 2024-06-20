@@ -45,6 +45,6 @@ In scenarios where the portmapper (rpcbind) service on port 111 is filtered or b
    ```
   3.**Run the Proxy Script:**
   ```sh
-     python3 rpcdump
+     python3 rpcdump.py
 
    ```
