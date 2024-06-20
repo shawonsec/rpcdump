@@ -31,5 +31,20 @@ In scenarios where the portmapper (rpcbind) service on port 111 is filtered or b
 
 1. **Clone the Repository:**
    ```sh
-   git clone https://github.com/yourusername/rpc-proxy.git
-   cd rpc-proxy
+     git clone https://github.com/yourusername/rpcdump.git
+     cd rpcdump
+   ```
+2.**Create a file named portmap.dump with the following content (modify as needed):**
+ ```sh
+    100000  2    tcp  111  portmapper
+    100005  1    udp  32769  mountd
+    100005  1    tcp  32770  mountd
+    100003  2    udp   2049  nfs
+    100003  3    udp   2049  nfs
+    100003  4    tcp   2049  nfs
+   ```
+  3.**Run the Proxy Script:**
+  ```sh
+     python3 rpcdump
+
+   ```
